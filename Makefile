@@ -4,8 +4,6 @@ NAME=lfsr
 
 SRC = main.c
 
-OUTFILES = compiled/
-
 CFLAGS = -g -Wall -Wextra -Werror
 
 
@@ -15,12 +13,9 @@ $(NAME): *.c
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
-	rm -f ./libft/*.o
 	rm -f *.o
-	rm -rf $(OUTFILES)
 
 fclean: clean
-	rm -f ./libft/libft.a
-	rm -f $(NAME) minishell
+	rm -f $(NAME)
 
 re: fclean $(NAME)
