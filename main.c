@@ -1,7 +1,10 @@
-#include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
+/**
+ * Algorithm taken from https://en.wikipedia.org/wiki/Linear-feedback_shift_register
+ * Not perfect implemented, bot working :)
+ */
 unsigned lfsr_fib(uint16_t start_value)
 {
 	if (start_value == 0)
@@ -22,8 +25,8 @@ unsigned lfsr_fib(uint16_t start_value)
 	return period;
 }
 
-int	main(int argc, char **argv)
-{
-	if (argc > 1 && argv)
-		printf("%u ", lfsr_fib(atoi(argv[1])));
-}
+// int	main(int argc, char **argv)
+// {
+// 	if (argc > 1 && argv)
+// 		printf("%u ", lfsr_fib(atoi(argv[1])));
+// }
